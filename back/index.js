@@ -13,4 +13,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", routes);
 
-app.listen(8080, () => console.log("Listening in port 8080"));
+const port = process.env.PORT;
+
+app.listen(port, () => console.log("Listening in port 8080"));

@@ -1,6 +1,10 @@
+require("dotenv").config();
+
+const { DB_NAME } = process.env;
+
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://techo:techo@techo.2k9wu.mongodb.net/techo?retryWrites=true&w=majority", {
+mongoose.connect(DB_NAME, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
