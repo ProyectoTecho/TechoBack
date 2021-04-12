@@ -1,8 +1,8 @@
-const express = require("express");
 require("./config/db");
-// const db = require('./config/db');
-const app = express();
+const express = require("express");
 const cors = require('cors')
+
+const app = express();
 app.use(cors())
 
 const morgan = require("morgan");
