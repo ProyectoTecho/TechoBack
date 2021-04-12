@@ -3,6 +3,7 @@ require("./config/db");
 // const db = require('./config/db');
 const app = express();
 const cors = require('cors')
+app.use(cors())
 
 const morgan = require("morgan");
 const routes = require("./routes");
@@ -12,7 +13,6 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(cors())
 
 app.use("/api", routes);
 
