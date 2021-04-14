@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer"); // email sender function
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "diego.jofre@bue.edu.ar",
-    pass: "Bb1234567890",
+    user: "proyecto.techo.ong@gmail.com",
+    pass: "plataforma5",
   },
 });
 
@@ -20,7 +20,7 @@ const sendMailController = {
 
     transporter.sendMail(
       {
-        from: "diego.jofre@bue.edu.ar",
+        from: "proyecto.techo.ong@gmail.com",
         to: email,
         subject: "¡Gracias por querer sumarte!",
         html: contentHTML,
