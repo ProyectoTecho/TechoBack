@@ -2,7 +2,6 @@ const User = require("../dbmodels/user");
 
 const userController = {
   create(req, res) {
-
     User.findOne({ email: req.body.email }) //buscamos el usuario por el mail y nos trae toda la data
       .then((data) => {
         if (data) {

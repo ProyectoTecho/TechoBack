@@ -3,30 +3,32 @@ const nodemailer = require("nodemailer"); // email sender function
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "equipo.ebooks@gmail.com",
-    pass: "Ebooks123",
+    user: "diego.jofre@bue.edu.ar",
+    pass: "Bb1234567890",
   },
 });
 
 const sendMailController = {
   send(req, res) {
+    console.log(req.body)
     const { nombre, email } = req.body;
     contentHTML = `
-         <p>¡Muchas gracias ${nombre} por ser parte de Techo!</p> 
-         <img src="https://www.techo.org/wp-content/uploads/2019/04/Color-RGB-Sin-fondo-02.png">
+         <p>${nombre}, este correo es para confirmar que hemos recibido el formulario completo.
+         Estaremos confirmando los datos ingresados para que puedas formar parte de la Comunidad de Socios/as que hacen posible nuestra acción en más de 80 barrios populares y nos volveremos a comunicar pronto.
+         ¡Gracias por estar del otro lado!</p> 
       `;
 
     transporter.sendMail(
       {
-        from: "equipo.ebooks@gmail.com",
+        from: "diego.jofre@bue.edu.ar",
         to: email,
-        subject: "Mensaje de eBooks",
+        subject: "¡Gracias por querer sumarte!",
         html: contentHTML,
       },
       function (error, info) {
         if (error) {
           console.log(error);
-          res.send(500, err.message);
+          res.send(500, error.message);
         } else {
           console.log("Email sent");
           res.status(200).jsonp(req.body);
