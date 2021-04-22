@@ -23,7 +23,9 @@ const sendMailDonationController = {
          <br>
          <br>
          Podés sumarte <b>haciendo click en el botón</b> "Quiero apoyar a TECHO", o <b>esperar nuestro llamado</b> en los próximos días para que te contemos más en detalle sobre lo que <b>vamos a lograr con tu donación</b>.</p>
-         <button style="background: blue; margin: 0 auto; padding: 2px">QUIERO APOYAR A TECHO</button> 
+         <div style="display: flex; justify-content: center">
+         <a href="https://proyectotecho.vercel.app/" target="_blank" style="background: rgb(0, 146, 221); text-decoration: none; color: white; border-radius: 5px; border: solid 1px white; margin: 0 auto; padding: 2px">QUIERO APOYAR A TECHO</a>
+         </div> 
          <p>${nombre}, ya diste el primer paso para seguir transformando realidades, espero que puedas dar el siguiente! &#128522;
          <br>
          <br>
