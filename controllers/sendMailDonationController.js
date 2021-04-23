@@ -10,9 +10,7 @@ const transporter = nodemailer.createTransport({
 
 const sendMailDonationController = {
   send(req, res) {
-    console.log(req.body);
-    const { nombre, email } = req.body;
-    console.log ("dattttttaaaa", req.body)
+    const { nombre, email } = req.body
     contentHTML = `
          <img src="https://static.wixstatic.com/media/8c9b2b_e86bb6dc915d4cd690053478f0882569~mv2.jpg/v1/fill/w_1440,h_165,al_c,q_80,usm_0.66_1.00_0.01/DSC_0826_edited.webp">
          <p>${nombre}, gracias por tu interés en apoyarnos con una donación. Soy Natasha, del equipo de TECHO Arg y te escribo para contarte que <b>recibimos tus datos correctamente</b>.<br>

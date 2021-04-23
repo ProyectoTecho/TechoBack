@@ -10,7 +10,6 @@ const transporter = nodemailer.createTransport({
 
 const sendMailController = {
   send(req, res) {
-    console.log(req.body);
     const { nombre, email, telefono, infoContacto } = req.body;
 
     contentHTMLTecho = `
