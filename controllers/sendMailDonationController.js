@@ -17,7 +17,7 @@ const sendMailDonationController = {
          <img src="https://static.wixstatic.com/media/8c9b2b_e86bb6dc915d4cd690053478f0882569~mv2.jpg/v1/fill/w_1440,h_165,al_c,q_80,usm_0.66_1.00_0.01/DSC_0826_edited.webp">
          <p>${nombre}, gracias por tu interés en apoyarnos con una donación. Soy Natasha, del equipo de TECHO Arg y te escribo para contarte que <b>recibimos tus datos correctamente</b>.<br>
          <br>
-         En TECHO runimos a jóvenes voluntarios, donantes y referentes comunitarios de asentamientos para trabajar por una Argentina más justa, igualitaria, integrada y sin pobreza.
+         En TECHO reunimos a jóvenes voluntarios, donantes y referentes comunitarios de asentamientos para trabajar por una Argentina más justa, igualitaria, integrada y sin pobreza.
          <br>
          <br>
          Ser parte de la comunidad de socios y socias, no solo significa <b>acompañarnos con una donación mensual </b>, sino también <b>transformar la realidad de millones de personas</b> que viven en asentamientos informales de Argentina.
