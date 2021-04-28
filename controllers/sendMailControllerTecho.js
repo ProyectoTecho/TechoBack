@@ -1,10 +1,12 @@
 const nodemailer = require("nodemailer"); // email sender function
 
+const { NODEMAILER_PASS, NODEMAILER_USER } = process.env;
+
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "proyecto.techo.ong@gmail.com",
-    pass: "plataforma5",
+    user: NODEMAILER_USER,
+    pass: NODEMAILER_PASS,
   },
 });
 
@@ -22,8 +24,8 @@ const sendMailController = {
 
     transporter.sendMail(
       {
-        from: "proyecto.techo.ong@gmail.com",
-        to: "proyecto.techo.ong@gmail.com",
+        from: NODEMAILER_USER,
+        to: NODEMAILER_USER,
         subject: "Nueva consulta",
         html: contentHTMLTecho,
       },
