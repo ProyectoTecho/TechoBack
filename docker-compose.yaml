@@ -27,9 +27,6 @@ services:
       - mongo
   client:
     build: ../TechoFront/front
-    # env_file: ./client/.env
-    ports:
-      - "80:80"
     volumes:
       - build-files:/front/build
 
