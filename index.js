@@ -18,7 +18,7 @@ const routes = require("./routes");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static(path.resolve(__dirname, "../TechoFront/front/build")))
+app.use(express.static(path.resolve(__dirname, "build")))
 
 app.use("/api", routes);
 

@@ -1,10 +1,10 @@
+const mongoose = require("mongoose");
 require("dotenv").config();
 
-const { DB_NAME } = process.env;
+const { MONGO_USER, MONGO_PASS } = process.env;
 
-const mongoose = require("mongoose");
-
-mongoose.connect(DB_NAME, {
+const connection = `mongodb://${MONGO_USER}:${MONGO_PASS}@mongo:27017`
+mongoose.connect(connection, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

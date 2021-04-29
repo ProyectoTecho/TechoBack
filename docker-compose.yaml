@@ -1,0 +1,37 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: milanesa
+    ports:
+      - "27017:27017"
+  back:
+    build: .
+    env_file: .env
+    environment:
+      DB_NAME: mongo
+      MONGO_USER: root
+      MONGO_PASS: milanesa
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./config:/back/config
+      - ./controllers:/back/controllers
+      - ./dbmodels:/back/dbmodels
+      - ./routes:/back/routes
+      - build-files:/back/build
+    depends_on:
+      - mongo
+  client:
+    build: ../TechoFront/front
+    # env_file: ./client/.env
+    ports:
+      - "80:80"
+    volumes:
+      - build-files:/front/build
+
+volumes:
+  build-files:
