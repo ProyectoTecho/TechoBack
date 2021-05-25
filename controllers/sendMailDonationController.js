@@ -5,8 +5,8 @@ const { NODEMAILER_PASS, NODEMAILER_USER } = process.env;
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: NODEMAILER_USER,
-    pass: NODEMAILER_PASS,
+    user: `${NODEMAILER_USER}`,
+    pass: `${NODEMAILER_PASS}`,
   },
 });
 
@@ -37,7 +37,7 @@ const sendMailDonationController = {
 
     transporter.sendMail(
       {
-        from: "proyecto.techo.ong@gmail.com",
+        from: NODEMAILER_USER,
         to: email,
         subject: "¡Gracias por querer sumarte!",
         html: contentHTML,

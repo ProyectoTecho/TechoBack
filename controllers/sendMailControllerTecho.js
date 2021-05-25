@@ -5,8 +5,8 @@ const { NODEMAILER_PASS, NODEMAILER_USER } = process.env;
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: NODEMAILER_USER,
-    pass: NODEMAILER_PASS,
+    user:`${NODEMAILER_USER}`,
+    pass:`${NODEMAILER_PASS}`,
   },
 });
 
